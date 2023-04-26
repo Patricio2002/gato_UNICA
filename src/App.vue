@@ -1,7 +1,7 @@
 
 <script setup>
     import { ref , computed } from 'vue'
-
+	import Gato from './components/gato.vue' 
 	const tablero = ref([
       ["","",""],
       ["","",""],
@@ -28,7 +28,7 @@
       return null
 	}
 
-	const jugador=ref("x")
+	const jugador=ref("X")
 
 	const turno = (n) => {
       if (tablero.value[x][y] !== "") return;
@@ -40,7 +40,17 @@
       }else if(tablero.value.flat().every((val)=>val!= "")){
         isGameOver.value = true;
       }
-      jugador.value = jugador.value === "X" ? "O" : "X";
+	  methods:{
+
+		function X_O(jugador){
+			if(jugador === 'X'){
+				jugaador = 'O'
+			}
+			else{
+				jugador = 'X'
+			}
+	  	}
+	  }
     }
 </script>
 
@@ -54,8 +64,8 @@
 				</div>
 				<div class="bg-gray-300 w-[140px] h-[52px] flex justify-evenly items-center rounded-md">
                 	<span class="fila__div--turno items-center">
-						<img class="w-[20px] h-[20px]" v-if="jugador === 'x'" src="./assets/icon-x-gray.svg" alt="x">
-						<img class="w-[20px] h-[20px]" v-if="jugador === 'o'" src="./assets/icon-o-gray.svg" alt="o">
+						<img class="w-[20px] h-[20px]" v-show="jugador === 'X'" src="./assets/icon-x-gray.svg" alt="x">
+						<img class="w-[20px] h-[20px]" v-show="jugador === 'O'" src="./assets/icon-o-gray.svg" alt="o">
 					</span>
 					<p>TURN</p>
 				</div>
@@ -69,34 +79,7 @@
 			<!-- Tablero -->
 			<section class="w-[460px] h-[461px] ">
 				
-				<section class="flex justify-between w-[460px] h-[140px]">
-					<div class="bg-gray-300 w-[140px] h-[140px] rounded-md" id="1">
-						<img class="object-scale-down" v-if="col === 'X'" src="./assets/icons/icon-x.svg" alt="X">
-						<img class="object-scale-down" v-if="col === 'O'" src="./assets/icons/icon-o.svg" alt="O">
-					</div>
-					<div class="bg-gray-300 w-[140px] h-[140px] rounded-md" id="2">
-					</div>
-					<div class="bg-gray-300 w-[140px] h-[140px] rounded-md" id="3">
-					</div>
-				</section>
-
-				<section class="flex justify-between w-[460px] h-[140px]">
-					<div class="bg-gray-300 w-[140px] h-[140px] rounded-md " id="4">
-					</div>
-					<div class="bg-gray-300 w-[140px] h-[140px] rounded-md" id="5">
-					</div>
-					<div class="bg-gray-300 w-[140px] h-[140px] rounded-md" id="6">
-					</div>
-				</section>
-
-				<section class="flex justify-between w-[460px] h-[140px]">
-					<div class="bg-gray-300 w-[140px] h-[140px] rounded-md" id="7">
-					</div>
-					<div class="bg-gray-300 w-[140px] h-[140px] rounded-md" id="8">
-					</div>
-					<div class="bg-gray-300 w-[140px] h-[140px] rounded-md" id="9">
-					</div>
-				</section>
+				<Gato></Gato>
 
 			</section>
 			<!-- Footer -->
