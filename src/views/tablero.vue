@@ -51,18 +51,18 @@
 			<!-- Header -->
             <section class="flex justify-between items-center">
 				<div class="flex justify-end w-[100px]">
-                	<img class="m-8 h-[31.74px] w-[71.21px]" src="./assets/logo.svg">
+                	<img class="m-8 h-[31.74px] w-[71.21px]" src="../assets/logo.svg">
 				</div>
 				<div class="bg-gray-300 w-[140px] h-[52px] flex justify-evenly items-center rounded-md">
                 	<span class="fila__div--turno items-center">
-						<img class="w-[20px] h-[20px]" v-show="jugador === 'X'" src="./assets/icon-x-gray.svg" alt="x">
-						<img class="w-[20px] h-[20px]" v-show="jugador === 'O'" src="./assets/icon-o-gray.svg" alt="o">
+						<img class="w-[20px] h-[20px]" v-show="jugador === 'x'" src="../assets/icon-x-gray.svg" alt="x">
+						<img class="w-[20px] h-[20px]" v-show="jugador === 'o'" src="../assets/icon-o-gray.svg" alt="o">
 					</span>
 					<p>TURN</p>
 				</div>
 				<div class="w-[100px] flex justify-end">
 					<div class="bg-gray-200 w-[52px] h-[52px] flex justify-center items-center rounded-md">
-						<img class="m-8 h-[20px] w-[20px]" src="./assets/icon-restart.svg">
+						<img class="m-8 h-[20px] w-[20px]" src="../assets/icon-restart.svg">
 					</div>
 				</div>
 				
