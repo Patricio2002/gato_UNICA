@@ -1,15 +1,14 @@
 <script setup>
 
     defineProps({
-        id: Number ,
-        turno: Number
+        volteado: Number
     })
 
 </script>
 <template>
-    <div v-if="turno ==0 " class="bg-gray-300 w-[140px] h-[140px] rounded-md" :id=" id "></div>
-    <div v-if="turno ==1 " class="bg-gray-300 w-[140px] h-[140px] rounded-md xlleno" :id=" id "></div>
-    <div v-if="turno ==2 " class="bg-gray-300 w-[140px] h-[140px] rounded-md olleno" :id=" id "></div>
+    <div v-if="volteado ==0 " class="bg-gray-300 w-[140px] h-[140px] rounded-md" :id=" id "></div>
+    <div v-if="volteado ==1 " class="bg-gray-300 w-[140px] h-[140px] rounded-md xlleno" :id=" id "></div>
+    <div v-if="volteado ==2 " class="bg-gray-300 w-[140px] h-[140px] rounded-md olleno" :id=" id "></div>
 </template>
 
 <style>
