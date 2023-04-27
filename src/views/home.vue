@@ -59,7 +59,7 @@ export default {
                 
             </div>
         </div>
-        <router-link to="tablero">
+        <router-link to="tablerocpu">
         <div class="bg-yellow-200 rounded-md w-[460px] h-[67px] flex justify-center items-center hover:bg-yellow-100" @click="setP2('0')">
             NEW GAME (VS CPU)
         </div>

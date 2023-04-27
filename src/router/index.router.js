@@ -16,6 +16,11 @@ const router = createRouter({
             path: '/tablero',
             name: 'tablero',
             component: () => import('../views/tablero.vue')
+        },
+        {
+            path: '/tablerocpu',
+            name: 'tablerocpu',
+            component: () => import('../views/tablerocpu.vue')
         }
     ]
 })
